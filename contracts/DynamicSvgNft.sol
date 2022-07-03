@@ -22,8 +22,6 @@ contract DynamicSvgNft is ERC721, Ownable {
     ) ERC721("Dynamo", "DYN") {
         s_tokenCounter = 0;
         i_priceFeed = AggregatorV3Interface(priceFeedAddress);
-        // setLowSVG(lowSvg);
-        // setHighSVG(highSvg);
         s_sadImageURI = svgToImageURI(lowSvg);
         s_happyImageURI = svgToImageURI(highSvg);
     }
